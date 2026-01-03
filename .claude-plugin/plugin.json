@@ -1,0 +1,20 @@
+{
+  "name": "loyal-wingman",
+  "description": "AI as a loyal wingman for fiction writing - a powerful tool, but never the master. Support for research, brainstorming, editing, and world-building while keeping the human writer in creative control.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Alexey Rybak"
+  },
+  "homepage": "https://loyalwingman.org",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "fiction",
+    "worldbuilding",
+    "obsidian",
+    "prose-editing",
+    "research",
+    "scene-writing",
+    "loyal-wingman"
+  ]
+}

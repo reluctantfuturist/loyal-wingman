@@ -1,0 +1,32 @@
+{
+  "name": "loyal-wingman",
+  "owner": {
+    "name": "Alexey Rybak",
+    "url": "https://loyalwingman.org"
+  },
+  "metadata": {
+    "description": "Fiction writing plugins embodying the Loyal Wingman philosophy"
+  },
+  "plugins": [
+    {
+      "name": "loyal-wingman",
+      "source": "./",
+      "description": "AI as a loyal wingman for fiction writing - research, brainstorming, editing, and world-building while keeping the human writer in creative control",
+      "version": "0.1.0",
+      "author": {
+        "name": "Alexey Rybak"
+      },
+      "homepage": "https://loyalwingman.org",
+      "repository": "https://github.com/reluctantfuturist/loyal-wingman",
+      "license": "MIT",
+      "keywords": [
+        "fiction",
+        "writing",
+        "worldbuilding",
+        "obsidian",
+        "prose-editing",
+        "research"
+      ]
+    }
+  ]
+}
