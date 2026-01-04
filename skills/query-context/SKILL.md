@@ -76,6 +76,12 @@ From scene requirements, list:
    - Cultural authenticity
    - Technical accuracy
 
+10. **Plot Threads** - Project index `## Plot Threads`
+    - Active threads for this scene
+    - Stale/orphaned thread warnings
+
+**REQUIRED SUB-SKILL:** Invoke `plot-threads` (Query mode)
+
 ### Phase 3: Compile Findings
 
 Format results as:
@@ -159,10 +165,12 @@ If you catch yourself thinking:
 - **Called by:** writing-mode (Phase 3)
 - **Gaps needing research:** Flag for research
 - **Gaps needing new canon:** Flag for world-bible
+- **Plot thread context:** REQUIRED SUB-SKILL: plot-threads
 
 ## Remember
 
 - **Search ALL folders** - Characters, Locations, Equipment, Factions, Systems, Themes, Timeline
+- **Check plot threads** - Invoke plot-threads for active thread context
 - **Cite sources** - Include file paths for verification
 - **Flag, don't fill** - Gaps are for user decision
 - **Continuity matters** - Check previous AND future scenes
