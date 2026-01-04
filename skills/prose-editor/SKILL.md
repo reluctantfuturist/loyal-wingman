@@ -36,11 +36,12 @@ QUOTE BEFORE FIXING. Read project Style Guide for patterns. Show text, explain f
 
 **Extract from Style Guide:**
 - Language and diction patterns
-- Character voice profiles (especially POV character for this scene)
 - Craft and continuity rules
 - Genre-specific guidance
 - Pitfalls and anti-patterns
 - QA checklist items
+
+**Note:** Voice capsule loading is handled by the `voice-checker` sub-skill in Phase 3.
 
 ### Phase 2: AI Pattern Detection
 
@@ -75,15 +76,18 @@ Scan for universal AI tells:
 
 ### Phase 3: Voice Consistency Check
 
-Using patterns loaded from project Style Guide:
+**REQUIRED SUB-SKILL:** Invoke `voice-checker`
 
-**Against Character Voice (if defined):**
-- [ ] POV character voice markers present
-- [ ] Character-specific patterns used appropriately
-- [ ] Dialogue style matches character profile
-- [ ] "Never Do" items avoided (if specified)
+The voice-checker skill will:
+1. Identify all characters with dialogue in the scene
+2. Load voice capsules for each character from `02_World/Characters/`
+3. Check POV character's internal narration against capsule
+4. Check ALL characters' dialogue against their respective capsules
+5. Return structured report with issues by severity
 
-**Against Prose Style (project-specific):**
+**Incorporate voice-checker results into your feedback.**
+
+**Against Style Guide (always check):**
 - [ ] Prose texture matches project guidelines
 - [ ] Verb/adjective balance appropriate
 - [ ] Sensory detail at expected level
@@ -100,7 +104,17 @@ Using patterns loaded from project Style Guide:
 
 ### Phase 4: Generate Feedback
 
-For each issue:
+**For voice capsule issues:**
+
+```
+**VOICE: [Category] - [Issue Type]**
+"[exact quote from text]"
+↳ Violates: [Capsule.Field] = "[the constraint]"
+↳ [Explanation of why this breaks character voice]
+↳ Fix: [Specific suggestion aligned with character]
+```
+
+**For other issues:**
 
 ```
 [SEVERITY]: [CATEGORY]
@@ -110,10 +124,10 @@ Fix: [specific replacement text]
 ```
 
 **Severity Levels:**
-- **CRITICAL**: Voice drift, character breaks, AI tells
-- **HIGH**: Generic prose, pattern repetition, Style Guide violations
-- **MEDIUM**: Polish opportunities, rhythm issues
-- **LOW**: Minor improvements
+- **CRITICAL**: "Never" field violations, character breaks, AI tells
+- **HIGH**: Style mismatches, wrong register, code-switching errors, Style Guide violations
+- **MEDIUM**: Missed opportunities, marker overuse, rhythm issues
+- **LOW**: Minor authenticity notes, polish opportunities
 
 ### Phase 5: Present Teaching Feedback
 
@@ -167,14 +181,16 @@ If you catch yourself thinking:
 ## Cross-References
 
 - **For full scene workflow:** Used by writing-mode
+- **Voice checking:** REQUIRED SUB-SKILL: voice-checker
 - **For style reference:** Read `01_Meta/Style_Guide/`
-- **For character specifics:** Read `02_World/Characters/[POV].md`
+- **For voice capsule guide:** See `docs/guides/voice-capsules.md`
 
 ## Remember
 
+- **Invoke voice-checker** - Let it handle all character voice verification
 - **Read Style Guide first** - Don't rely on memory
 - **Quote before fixing** - Never edit without showing problem
 - **Teach, don't just fix** - User should understand WHY
 - **User applies edits** - Suggest, don't apply (unless explicitly asked)
 - **Preserve rough edges** - Overpolish kills voice
-- **Reference sections** - Cite Style Guide in feedback when applicable
+- **Reference sources** - Cite Style Guide and voice-checker results in feedback

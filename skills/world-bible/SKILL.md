@@ -214,14 +214,31 @@ Validation: [status from validate-links]
 - Appears In (scene references)
 - Related (locations, events, systems)
 
-**Voice capsule required for POV characters**:
+**Voice capsule required for POV characters** (used by prose-editor for voice checking):
+
 ```markdown
-### Voice
-- Internal: [thinking style]
-- Dialogue: [speech patterns]
-- Patterns: "[recurring phrases or thoughts]"
-- Never: [off-limits behaviors/phrases]
+## Voice
+
+### Dialogue
+- **Style**: [core speech pattern - how they talk]
+- **Markers**: [signature phrases, verbal tics]
+- **Vocabulary**: [characteristic word choices, jargon, register]
+- **Code-switching**: [how speech changes by context/relationship]
+- **Never**: [off-limits dialogue patterns]
+
+### Internal
+- **Style**: [thinking pattern - how they process]
+- **Markers**: [recurring internal phrases]
+- **Never**: [off-limits internal voice]
+
+### Leitmotifs
+- [thematic phrases that define character across scenes]
+
+### Stress Responses
+- [how voice changes under pressure]
 ```
+
+See `docs/guides/voice-capsules.md` for detailed guidance on writing effective voice capsules.
 
 ### Location Entries
 
