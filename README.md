@@ -28,6 +28,7 @@ This plugin implements that philosophy through structured workflows that keep yo
 - **query-context** - Comprehensive vault search before writing
 - **draft-support** - Real-time assistance during drafting (without writing for you)
 - **prose-editor** - AI pattern detection, voice consistency, teaching feedback
+- **voice-checker** - Verify all characters' dialogue against voice capsules
 - **research** - Find, validate, archive research with proper sourcing
 
 ### World Management Skills
@@ -198,6 +199,7 @@ Gaps in the vault are flagged for your decision, not filled with AI creativity. 
 | query-context | writing-mode | Comprehensive vault search |
 | draft-support | writing-mode | Real-time drafting assistance |
 | prose-editor | writing-mode | Polish and de-AI-ify prose |
+| voice-checker | prose-editor, Manual | Check dialogue against voice capsules |
 | research | writing-mode, thinking-mode | Research with proper sourcing |
 | world-bible | thinking-mode | Create/maintain world bible entries |
 | validate-links | world-bible | Check link integrity |
