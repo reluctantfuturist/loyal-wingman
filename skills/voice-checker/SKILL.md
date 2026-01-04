@@ -25,6 +25,19 @@ EVERY CHARACTER HAS A VOICE. Load capsules for all speakers. Check POV internal 
 - Before marking scene as final
 - When dialogue feels off
 
+## Scene Requirements
+
+Scenes should include `pov_character` in frontmatter:
+
+```yaml
+---
+title: Scene Title
+pov_character: Character Name
+---
+```
+
+The character name should match the filename (without `.md`) in `02_World/Characters/`.
+
 ## The Process
 
 ### Phase 1: Identify Characters in Scene
@@ -148,32 +161,34 @@ Expected structure in `02_World/Characters/[Name].md`:
 ## Voice
 
 ### Dialogue
-- **Style**: [core speech pattern]
+- **Style**: [core speech pattern - how they talk]
 - **Markers**: [signature phrases, verbal tics]
-- **Vocabulary**: [characteristic word choices]
-- **Code-switching**: [context variations by relationship]
-- **Never**: [off-limits patterns]
+- **Vocabulary**: [characteristic word choices, jargon, register]
+- **Code-switching**: [how speech changes by context/relationship]
+- **Never**: [off-limits dialogue patterns]
 
 ### Internal
-- **Style**: [thinking pattern]
+- **Style**: [thinking pattern - how they process]
 - **Markers**: [recurring internal phrases]
 - **Never**: [off-limits internal voice]
 
 ### Leitmotifs
-- [thematic phrases]
+- [thematic phrases that define character across scenes]
 
 ### Stress Responses
-- [voice changes under pressure]
+- [how voice changes under pressure]
 ```
 
 ## Severity Mapping
 
-| Severity | Trigger |
-|----------|---------|
-| CRITICAL | Any `Never` field violation |
-| HIGH | Style mismatch, wrong register, vocabulary break |
-| MEDIUM | Missed opportunities, marker overuse, leitmotif repetition |
-| LOW | Minor authenticity notes |
+| Severity | Trigger | Examples |
+|----------|---------|----------|
+| CRITICAL | Any `Never` field violation | Character says something explicitly forbidden |
+| HIGH | Style mismatch, wrong register, vocabulary break | Terse character gives speech; formal character uses slang with strangers |
+| MEDIUM | Missed opportunities, marker overuse, leitmotif repetition | Same phrase used 3x in scene; markers absent where they'd feel natural |
+| LOW | Minor authenticity notes | Slight vocabulary drift, optional polish |
+
+**Key distinction:** Vocabulary that *breaks* character (HIGH) vs markers that are *missing* or overused (MEDIUM). Missing markers are acceptable—they're not required in every scene. Wrong vocabulary signals the character isn't speaking authentically.
 
 ## Red Flags - STOP
 

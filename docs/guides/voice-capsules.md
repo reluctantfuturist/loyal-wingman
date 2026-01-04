@@ -129,12 +129,17 @@ How voice changes when the character is under pressure. Helps the prose-editor c
 - Sarcasm before engagement, silence during
 ```
 
-## How Prose-Editor Uses Voice Capsules
+## How Voice-Checker Works
 
-1. **Loads the capsule**: Reads `pov_character` from scene frontmatter, loads that character's Voice section
-2. **Checks internal narration**: Compares POV character's thoughts against Internal fields
-3. **Checks dialogue**: Verifies the POV character's speech matches Dialogue fields
-4. **Reports violations**: Quotes exact text, references which field was violated, suggests fixes
+The prose-editor invokes the voice-checker skill to verify character voices:
+
+1. **Identifies all speakers**: Scans the scene for the POV character and all characters with dialogue
+2. **Loads capsules**: Reads voice capsules for each identified character from `02_World/Characters/`
+3. **Checks POV internal narration**: Compares POV character's thoughts against Internal fields
+4. **Checks ALL dialogue**: Verifies every character's speech against their respective capsules
+5. **Reports violations**: Quotes exact text, references which field was violated, suggests fixes
+
+Characters without voice capsules are skipped with a warning, not failed.
 
 ### Feedback Example
 
@@ -180,3 +185,13 @@ The prose-editor gracefully handles missing pieces:
 - **No `## Voice` section**: Warns you, skips voice-specific checks
 
 You'll still get AI pattern detection and other prose-editor checks—you just won't get character-specific voice feedback.
+
+## Edge Cases
+
+**Multiple POV switches:** If your scene shifts POV mid-scene, set `pov_character` to the primary POV. Internal narration checks will apply to that character; dialogue checks will apply to all speakers regardless of POV.
+
+**Omniscient narration:** If no clear POV character exists, omit `pov_character`. Voice-checker will still verify all dialogue against capsules, but skip internal narration checks.
+
+**Minor characters without capsules:** You don't need voice capsules for every character. Background characters with one or two lines can be skipped. Voice-checker will warn you but continue checking characters that do have capsules.
+
+**Ensemble scenes:** In scenes with many speakers, voice-checker loads capsules for all identified characters. If this gets unwieldy, consider which characters truly need voice consistency enforcement.

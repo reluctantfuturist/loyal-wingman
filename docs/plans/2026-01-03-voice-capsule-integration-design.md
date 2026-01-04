@@ -33,19 +33,19 @@ Voice capsules live in character files at `02_World/Characters/[Name].md` within
 ## Voice
 
 ### Dialogue
-- **Style**: [core speech pattern]
+- **Style**: [core speech pattern - how they talk]
 - **Markers**: [signature phrases, verbal tics]
 - **Vocabulary**: [characteristic word choices, jargon, register]
-- **Code-switching**: [context variations by relationship/formality]
-- **Never**: [off-limits patterns]
+- **Code-switching**: [how speech changes by context/relationship]
+- **Never**: [off-limits dialogue patterns]
 
 ### Internal
-- **Style**: [thinking pattern]
+- **Style**: [thinking pattern - how they process]
 - **Markers**: [recurring internal phrases]
 - **Never**: [off-limits internal voice]
 
 ### Leitmotifs
-- [thematic phrases that define character]
+- [thematic phrases that define character across scenes]
 
 ### Stress Responses
 - [how voice changes under pressure]
@@ -220,7 +220,6 @@ For projects adopting this feature:
 
 ## Out of Scope
 
-- Checking non-POV character dialogue (future enhancement)
 - Automated voice capsule generation from existing prose
 - Voice drift tracking across multiple scenes
 
