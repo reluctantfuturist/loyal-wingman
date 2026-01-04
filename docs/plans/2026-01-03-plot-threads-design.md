@@ -236,7 +236,7 @@ allowed-tools:
 2. Update `skills/query-context/SKILL.md` to invoke plot-threads
 3. Update `skills/writing-mode/SKILL.md` to add Phase 6
 4. Update `README.md` with new skill
-5. Bump version in `package.json`
+5. Bump version in `.claude-plugin/plugin.json`
 6. Close GitHub issue #2
 
 ---

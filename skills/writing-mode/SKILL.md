@@ -94,12 +94,10 @@ The prose-editor skill will:
 **REQUIRED SUB-SKILL:** Invoke `plot-threads` (Update mode)
 
 The plot-threads skill will:
-1. Read completed scene
-2. Cross-reference against existing threads in project index
-3. Propose status changes (Planted → Developing → Resolved)
-4. Suggest new threads detected in scene
-5. Wait for user confirmation
-6. Update project index `## Plot Threads` table
+1. Read completed scene and cross-reference against existing threads
+2. Propose status changes and new threads detected
+3. Wait for user confirmation before editing
+4. Update project index `## Plot Threads` table
 
 **On completion:** Proceed to Technical Review
 

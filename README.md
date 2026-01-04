@@ -222,6 +222,11 @@ MIT License - see LICENSE file for details.
 
 ## Changelog
 
+### 0.2.0
+
+- New skill: plot-threads for narrative thread tracking
+- Integration with query-context and writing-mode workflows
+
 ### 0.1.0
 
 - 10 skills for fiction writing workflow

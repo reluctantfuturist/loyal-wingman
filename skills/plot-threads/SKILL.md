@@ -42,6 +42,8 @@ Threads live in the project index file:
 |--------|------|-------|------------|--------|--------|
 | Gagik's true nature | Mystery | Series | Ch1 | Developing | Ch1, Ch3, Ch4 |
 | Sorochan breach | Question | Book 1 | Ch2 | Resolved | Ch2, Ch3 |
+| Gagik's specimens | Foreshadowing | Series | Ch3 | Planted | Ch3 |
+| Ch1 job offer | Chekhov | Book 1 | Ch1 | Planted | Ch1 |
 ```
 
 ### Thread Types
@@ -95,9 +97,7 @@ Scan for issues:
 - Book-scoped thread still Planted in late chapters (Ch7+)
 - `⚠ ORPHANED: "[Thread]" (Type, Scope) — still Planted in Ch[X]`
 
-**Stale Threads:**
-- Mystery not touched in 4+ chapters
-- Question not touched in 2+ chapters
+**Stale Threads:** (thresholds per Thread Types table above)
 - `⚠ STALE: "[Thread]" (Type) — last touched Ch[X], now Ch[Y]`
 
 **Phase 4: Generate Report**
@@ -117,8 +117,6 @@ Scan for issues:
 **Recently Resolved:**
 - [Thread] — resolved Ch[X]
 ```
-
----
 
 ### Update Mode (After Drafting)
 
@@ -158,13 +156,7 @@ Confirm, adjust, or add more?
 
 **Phase 4: Wait for User Confirmation**
 
-**STOP and wait.** Do not edit until user confirms.
-
-User may:
-- Confirm all proposals
-- Adjust specific items
-- Add threads not detected
-- Reject proposals
+**STOP and wait.** User may confirm, adjust, add, or reject proposals.
 
 **Phase 5: Apply Updates**
 
@@ -172,11 +164,9 @@ After confirmation:
 1. Use Edit tool to update `## Plot Threads` table
 2. Report changes made
 
----
-
 ### Audit Mode (End of Book)
 
-Triggered manually or when final chapter marked complete.
+Triggered manually via "thread audit" or "book complete" commands.
 
 **Phase 1: Full Thread Scan**
 
