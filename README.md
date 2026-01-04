@@ -29,6 +29,7 @@ This plugin implements that philosophy through structured workflows that keep yo
 - **draft-support** - Real-time assistance during drafting (without writing for you)
 - **prose-editor** - AI pattern detection, voice consistency, teaching feedback
 - **voice-checker** - Verify all characters' dialogue against voice capsules
+- **plot-threads** - Track narrative threads, setups/payoffs, Chekhov's guns
 - **research** - Find, validate, archive research with proper sourcing
 
 ### World Management Skills
@@ -200,6 +201,7 @@ Gaps in the vault are flagged for your decision, not filled with AI creativity. 
 | draft-support | writing-mode | Real-time drafting assistance |
 | prose-editor | writing-mode | Polish and de-AI-ify prose |
 | voice-checker | prose-editor, Manual | Check dialogue against voice capsules |
+| plot-threads | query-context, writing-mode, Manual | Track narrative threads |
 | research | writing-mode, thinking-mode | Research with proper sourcing |
 | world-bible | thinking-mode | Create/maintain world bible entries |
 | validate-links | world-bible | Check link integrity |
@@ -219,6 +221,11 @@ Contributions welcome! Please:
 MIT License - see LICENSE file for details.
 
 ## Changelog
+
+### 0.2.0
+
+- New skill: plot-threads for narrative thread tracking
+- Integration with query-context and writing-mode workflows
 
 ### 0.1.0
 
