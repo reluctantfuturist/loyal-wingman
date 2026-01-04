@@ -89,7 +89,21 @@ The prose-editor skill will:
 3. Present teaching feedback with quotes
 4. Wait for approval before edits
 
-### Phase 6: Technical Review
+### Phase 6: Plot Thread Update
+
+**REQUIRED SUB-SKILL:** Invoke `plot-threads` (Update mode)
+
+The plot-threads skill will:
+1. Read completed scene
+2. Cross-reference against existing threads in project index
+3. Propose status changes (Planted → Developing → Resolved)
+4. Suggest new threads detected in scene
+5. Wait for user confirmation
+6. Update project index `## Plot Threads` table
+
+**On completion:** Proceed to Technical Review
+
+### Phase 7: Technical Review
 
 After prose polish approved, use the **Task tool** to dispatch a technical review agent:
 
@@ -117,7 +131,7 @@ Task tool parameters:
 
 **Present agent findings to user for approval before any fixes.**
 
-### Phase 7: Exit
+### Phase 8: Exit
 
 Trigger exit when:
 - User says "done" / "pause" / "stop writing"
@@ -135,7 +149,8 @@ On exit: "Exiting WRITING MODE. [X] items in parking lot."
 | 3. Research (if gaps) | `research` |
 | 4. Drafting Support | `draft-support` |
 | 5. Polish | `prose-editor` |
-| 6. Technical Review | Task tool (Explore agent) |
+| 6. Plot Thread Update | `plot-threads` |
+| 7. Technical Review | Task tool (Explore agent) |
 
 ## Red Flags - STOP
 
@@ -153,6 +168,7 @@ If you catch yourself thinking:
 - **Research needs:** REQUIRED SUB-SKILL: research
 - **Drafting support:** REQUIRED SUB-SKILL: draft-support
 - **Polish phase:** REQUIRED SUB-SKILL: prose-editor
+- **Plot thread updates:** REQUIRED SUB-SKILL: plot-threads
 - **For open-ended brainstorming:** Switch to thinking-mode
 - **For new canon:** Flag for thinking-mode (world-bible)
 
@@ -162,5 +178,5 @@ If you catch yourself thinking:
 - **Invoke subskills** - Each phase has a required skill
 - **User writes the draft** - Support, don't supplant
 - **Park strays immediately** - Via draft-support
-- **Two-stage review** - Prose first (prose-editor), technical second
+- **Three-stage review** - Prose (prose-editor), threads (plot-threads), technical
 - **Discovery zones are sacred** - Don't over-plan what's marked flexible
